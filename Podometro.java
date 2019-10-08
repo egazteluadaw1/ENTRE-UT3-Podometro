@@ -3,29 +3,34 @@
  * acerca de los pasos, distancia, ..... que una persona (hombre o mujer)
  * ha dado en una semana. 
  * 
- * @author    - pon aquí tu nombre - 
+ * @Elaia Gaztelu
  * 
  */
 public class Podometro {
    
-    
-    
+    private int pasos;
+    private int distancia;
+    private char sexo;
+    private String marca;
+    private double altura;
 
     /**
      * Inicializa el podómetro con la marca indicada por el parámetro.
      * El resto de atributos se ponen a 0 y el sexo, por defecto, es mujer
      */
-    public Podometro() {
-
-         
+    public Podometro(String queMarca) {
+        marca = queMarca;
+        pasos = 0;
+        distancia = 0;
+        sexo = 'M';
     }
 
     /**
      * accesor para la marca
      *  
      */
-    public    getMarca() {
-
+    public  String  getMarca() {
+        return marca;
         
 
     }
@@ -40,7 +45,8 @@ public class Podometro {
      *  
      */
     public void configurar(double queAltura, char queSexo) {
-
+        altura = queAltura;
+        sexo = queSexo;
         
     }
 
@@ -57,9 +63,13 @@ public class Podometro {
      *   
      *   (leer enunciado del ejercicio)
      */
-    public void registrarCaminata(int pasos, int dia, int horaInicio,
+    public void registrarCaminata(int quePasos, String dia, int horaInicio,
                             int horaFin) {
-
+        pasos = quePasos;
+        switch (dia) {
+           
+            
+        }        
         
 
     }
@@ -98,7 +108,7 @@ public class Podometro {
      */
     public String diaMayorNumeroPasos() {
 
-        
+        return marca;
         
 
     }
@@ -110,7 +120,7 @@ public class Podometro {
      *  
      */    
     public void reset() {
-
+        
         
 
     }
