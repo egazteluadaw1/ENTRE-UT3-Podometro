@@ -3,29 +3,41 @@
  * acerca de los pasos, distancia, ..... que una persona (hombre o mujer)
  * ha dado en una semana. 
  * 
- * @author    - pon aquí tu nombre - 
+ * @Elaia Gaztelu
  * 
  */
 public class Podometro {
-   
-    
-    
+    private final char MUJER = 'M';
+    private final char HOMBRE = 'H';
+    private final int SABADO = 6;
+    private final int DOMINGO = 7;
+    private final double ZANCADA_HOMBRE = 5.5;
+    private int pasos;
+    private int distancia;
+    private String marca;
+    private double altura;
+    private char sexo;
+    private double longitudZancada;
+    private int inicio;
+    private int fin;
 
     /**
      * Inicializa el podómetro con la marca indicada por el parámetro.
      * El resto de atributos se ponen a 0 y el sexo, por defecto, es mujer
      */
-    public Podometro() {
-
-         
+    public Podometro(String queMarca) {
+        marca = queMarca;
+        pasos = 0;
+        distancia = 0;
+        sexo = 'M';
     }
 
     /**
      * accesor para la marca
      *  
      */
-    public    getMarca() {
-
+    public  String  getMarca() {
+        return marca;
         
 
     }
@@ -40,7 +52,8 @@ public class Podometro {
      *  
      */
     public void configurar(double queAltura, char queSexo) {
-
+        altura = queAltura;
+        sexo = queSexo;
         
     }
 
@@ -57,9 +70,28 @@ public class Podometro {
      *   
      *   (leer enunciado del ejercicio)
      */
-    public void registrarCaminata(int pasos, int dia, int horaInicio,
+    public void registrarCaminata(int quePasos, int dia, int horaInicio,
                             int horaFin) {
-
+        pasos = quePasos;
+        String nombreDia = "";
+        switch (dia) {
+           case 1: nombreDia = "Lunes";
+           break;
+           case 2: nombreDia = "Martes";
+           break;
+           case 3: nombreDia = "Miercoles";
+           break;
+           case 4: nombreDia = "Jueves";
+           break;
+           case 5: nombreDia = "Viernes";
+           break;
+           case 6: nombreDia = "Sabado";
+           break;
+           case 7: nombreDia = "Domingo";
+           break;
+        }        
+        horaInicio = inicio;
+        horaFin = fin;
         
 
     }
@@ -72,7 +104,9 @@ public class Podometro {
      *  
      */
     public void printConfiguracion() {
-
+        System.out.println("Altura: " + altura +
+                            "\nSexo: " + sexo +
+                            "\nLongitud de la zancada: " + longitudZancada);
         
 
     }
@@ -98,8 +132,7 @@ public class Podometro {
      */
     public String diaMayorNumeroPasos() {
 
-        
-        
+        return marca;
 
     }
 
@@ -110,7 +143,7 @@ public class Podometro {
      *  
      */    
     public void reset() {
-
+        
         
 
     }
